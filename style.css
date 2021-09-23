@@ -81,4 +81,18 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.lights-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lights {
+  width: 300px;
+  height: 360px;
+}
 /*# sourceMappingURL=style.css.map */
