@@ -9,19 +9,19 @@ let questions = [
     question: "Which driver do you prefer?",
     choice1: "Lando Norris",
     choice2: "Charles Leclerc",
-    answer: 2,
+    answer: 1,
   },
   {
     question: "Which driver do you prefer?",
     choice1: "George Russell",
     choice2: "Valtteri Bottas",
-    answer: 2,
+    answer: 1,
   },
   {
     question: "Which driver do you prefer?",
     choice1: "Max Verstappen",
     choice2: "Sergio Perez",
-    answer: 2,
+    answer: 1,
   },
   {
     question: "Which driver do you prefer?",
@@ -33,7 +33,7 @@ let questions = [
     question: "Which driver do you prefer?",
     choice1: "Sebastian Vettel",
     choice2: "Fernando Alonso",
-    answer: 2,
+    answer: 1,
   },
   {
     question: "Which driver do you prefer?",
@@ -49,14 +49,14 @@ let questions = [
   },
   {
     question: "Which driver do you prefer?",
-    choice1: "",
-    choice2: "",
+    choice1: "Carlos Sainz",
+    choice2: "Danny Ricciardo",
     answer: 2,
   },
   {
     question: "Which driver do you prefer?",
-    choice1: "",
-    choice2: "",
-    answer: 2,
+    choice1: "Lance Stroll",
+    choice2: "Esteban Ocon",
+    answer: 1,
   },
 ];
