@@ -63,6 +63,7 @@ let questions = [
 
 const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
+//const submitButton = document.getElementById("submit");
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -73,7 +74,9 @@ let availableQuestions = [];
 const scorePoints = 10;
 const maxQuestions = 10;
 
-const startGame = function () {
+//submitButton.addEventListener("click", submit);
+
+const beginQuiz = function () {
   console.log("started");
   questionCounter = 0;
   score = 0;
@@ -134,4 +137,4 @@ const incrementScore = (num) => {
 
 // startButton.addEventListener("click", startGame);
 
-startGame();
+beginQuiz();
