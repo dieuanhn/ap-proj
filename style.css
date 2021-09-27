@@ -121,7 +121,6 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 10px;
 }
 
 .question-box {
@@ -145,6 +144,8 @@ body {
 }
 
 .choice-text {
-  font-size: 15px;
+  font-size: 17px;
+  background-color: #e9d3b9;
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */

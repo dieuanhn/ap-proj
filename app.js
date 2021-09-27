@@ -38,7 +38,7 @@ let questions = [
   {
     question: "Which driver do you prefer?",
     choice1: "Yuki Tsunoda",
-    choice2: "MicK Schumacher",
+    choice2: "Mick Schumacher",
     answer: 2,
   },
   {
