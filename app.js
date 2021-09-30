@@ -84,7 +84,12 @@ const getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
     localStorage.setItem("mostRecentScore", score);
 
-    return window.location.assign("/end.html"); //keeps track of score
+    return window.location.assign("/end.html");
+
+    if (score < 40) {
+      document.getElementById("result").innerHTML +=
+        "<p>you have bad taste</p>";
+    }
   }
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length); //value of the question index
@@ -114,6 +119,8 @@ const gradeUser = choices.forEach((choice) => {
 
     if (classToApply == "correct") {
       incrementScore(scorePoints);
+
+      console.log(score);
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
@@ -127,7 +134,6 @@ const gradeUser = choices.forEach((choice) => {
 
 const incrementScore = (num) => {
   score += num;
-  scoreText.innerText = score;
 };
 
 beginQuiz();
