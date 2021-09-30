@@ -61,20 +61,16 @@ let questions = [
   },
 ];
 
-const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
-//const submitButton = document.getElementById("submit");
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let correctAnswers = true;
 let score = 0; //score starts at 0
 let questionCounter = 0; //questions start at 0
 let availableQuestions = [];
 
 const scorePoints = 10;
 const maxQuestions = 10;
-
-//submitButton.addEventListener("click", submit);
 
 const beginQuiz = function () {
   console.log("started");
@@ -102,14 +98,14 @@ const getNewQuestion = () => {
 
   availableQuestions.splice(questionsIndex, 1);
 
-  acceptingAnswers = true;
+  correctAnswers = true;
 };
 
 const gradeUser = choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
-    if (!acceptingAnswers) return;
+    if (!correctAnswers) return;
 
-    acceptingAnswers = false;
+    correctAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
 
@@ -117,13 +113,12 @@ const gradeUser = choices.forEach((choice) => {
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
     if (classToApply == "correct") {
-      incrementScore(scorePoints); //increases score by 10 when a question is answered correct
+      incrementScore(scorePoints);
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
 
     setTimeout(() => {
-      //whenever we answer a question, it'll have time to show
       selectedChoice.parentElement.classList.remove(classToApply);
       getNewQuestion();
     }, 1000);
@@ -134,7 +129,5 @@ const incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;
 };
-
-// startButton.addEventListener("click", startGame);
 
 beginQuiz();
