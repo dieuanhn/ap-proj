@@ -85,11 +85,10 @@ const getNewQuestion = () => {
     localStorage.setItem("mostRecentScore", score);
 
     return window.location.assign("/end.html");
+  }
 
-    if (score < 40) {
-      document.getElementById("result").innerHTML +=
-        "<p>you have bad taste</p>";
-    }
+  if (score < 40) {
+    document.getElementById('result');
   }
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length); //value of the question index
