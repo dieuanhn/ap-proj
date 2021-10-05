@@ -87,10 +87,6 @@ const getNewQuestion = () => {
     return window.location.assign("/end.html");
   }
 
-  if (score < 40) {
-    document.getElementById('result');
-  }
-
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length); //value of the question index
   currentQuestion = availableQuestions[questionsIndex]; //keeps track of what question count
   question.innerText = currentQuestion.question; //determines question to ask
