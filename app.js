@@ -127,13 +127,15 @@ const gradeUser = choices.forEach((choice) => {
   });
 });
 
-const score = () => {
+const getScore = () => {
+  //if (availableQuestions.length === 0 || questionCounter > maxQuestions)
+
   if (score < 40) {
     document.getElementById("result").innerHTML += "<p>you have bad taste</p>";
   }
 
   if (score > 40) {
-    document.getElementById("result").innerHTML += "<p>you have go taste</p>";
+    document.getElementById("result").innerHTML += "<p>you have good taste</p>";
   }
 };
 
@@ -142,3 +144,4 @@ const incrementScore = (num) => {
 };
 
 beginQuiz();
+getScore();
