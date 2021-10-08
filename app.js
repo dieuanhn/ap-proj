@@ -80,8 +80,20 @@ const beginQuiz = function () {
   getNewQuestion();
 };
 
+const getScore = () => {
+  if (score < 40) {
+    document.getElementById("result").innerHTML +=
+      "<h1>you have bad taste</h1>";
+  }
+
+  if (score > 40) {
+    document.getElementById("result").innerHTML += "<p>you have good taste</p>";
+  }
+};
+
 const getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
+    getScore();
     localStorage.setItem("mostRecentScore", score);
 
     return;
@@ -132,21 +144,8 @@ function endGame() {
   }
 }
 
-const getScore = () => {
-  if (availableQuestions.length === 0 || questionCounter > maxQuestions)
-    if (score < 40) {
-      document.getElementById("result").innerHTML +=
-        "<p>you have bad taste</p>";
-    }
-
-  if (score > 40) {
-    document.getElementById("result").innerHTML += "<p>you have good taste</p>";
-  }
-};
-
 const incrementScore = (num) => {
   score += num;
 };
 
 beginQuiz();
-getScore();
