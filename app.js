@@ -72,7 +72,7 @@ let availableQuestions = [];
 const scorePoints = 10;
 const maxQuestions = 10;
 
-const beginQuiz = function () {
+const beginQuiz = function quiz() {
   console.log("started");
   questionCounter = 0;
   score = 0;
@@ -80,7 +80,7 @@ const beginQuiz = function () {
   getNewQuestion();
 };
 
-const getScore = () => {
+const getScore = function getScore() {
   if (score < 40) {
     document.getElementById("result").innerHTML +=
       "<h1>you have bad taste</h1>";
@@ -138,11 +138,6 @@ const gradeUser = choices.forEach((choice) => {
     }, 1000);
   });
 });
-
-function endGame() {
-  if (availableQuestions.length === maxQuestions) {
-  }
-}
 
 const incrementScore = (num) => {
   score += num;
